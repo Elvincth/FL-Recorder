@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="58.966" height="57.692" viewBox="0 0 58.966 57.692">
+  <g id="SRC_Logo" data-name="SRC Logo" transform="translate(0.602 1.027)">
+    <g id="Group_13" data-name="Group 13">
+      <g id="Group_11" data-name="Group 11" transform="translate(37.375)">
+        <path id="Path_3" data-name="Path 3" d="M0,0V20.811" transform="translate(16.989)" fill="none" stroke="#2285a0" stroke-width="8"/>
+        <path id="Path_1" data-name="Path 1" d="M20.386,0H0" transform="translate(0 2.973)" fill="none" stroke="#26afd5" stroke-width="8"/>
+      </g>
+      <g id="Group_12" data-name="Group 12">
+        <line id="Line_2" data-name="Line 2" y2="20.811" transform="translate(3.398)" fill="none" stroke="#2285a0" stroke-width="8"/>
+        <path id="Path_1-2" data-name="Path 1" d="M0,0H20.386" transform="translate(0 2.973)" fill="none" stroke="#26afd5" stroke-width="8"/>
+      </g>
+    </g>
+    <g id="Group_14" data-name="Group 14" transform="translate(0 34.827)">
+      <g id="Group_12-2" data-name="Group 12" transform="translate(0 0)">
+        <path id="Path_1-3" data-name="Path 1" d="M0,0H20.386" transform="translate(0 17.838)" fill="none" stroke="#2285a0" stroke-width="8"/>
+        <line id="Line_2-2" data-name="Line 2" y1="20.811" transform="translate(3.398)" fill="none" stroke="#26afd5" stroke-width="8"/>
+      </g>
+    </g>
+    <circle id="Ellipse_2" data-name="Ellipse 2" cx="10.5" cy="10.5" r="10.5" transform="translate(18.5 17.138)" fill="#26afd4"/>
+    <g id="Group_15" data-name="Group 15" transform="translate(37.375 34.827)">
+      <path id="Path_1-4" data-name="Path 1" d="M20.386,0H0" transform="translate(0 17.838)" fill="none" stroke="#2285a0" stroke-width="8"/>
+      <line id="Line_2-3" data-name="Line 2" y1="20.811" transform="translate(16.989)" fill="none" stroke="#26afd5" stroke-width="8"/>
+    </g>
+  </g>
+</svg>

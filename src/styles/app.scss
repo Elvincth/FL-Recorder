@@ -1,0 +1,25 @@
+@import '~roboto-fontface/css/roboto/roboto-fontface.css';
+
+:root {
+    --background-color: #1B1B1B;
+    --separator: #282A30;
+    --round-button: #282A30;
+}
+
+@font-face {
+    font-family: 'DS-Digital';
+    src: url('/assets/fonts/DS-DIGI.TTF');
+}
+
+body {
+    margin: 0;
+    font-family: 'roboto', sans-serif;
+}
+
+* {
+    color: #fff;
+}
+
+// .menubar {
+//     display: none;
+// }
