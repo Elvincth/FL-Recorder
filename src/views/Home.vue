@@ -26,7 +26,10 @@
 import timer from "../components/home/timer";
 import separator from "../components/shared/separator";
 import fabButton from "../components/shared/fab-button";
-import { desktopCapturer } from "electron";
+//Eletronc
+import { ipcRenderer } from "electron";
+//Lib
+import * as record from "../util/screen-record";
 
 export default {
   components: {
@@ -39,16 +42,9 @@ export default {
   },
   methods: {
     screenRecord() {
-      desktopCapturer.getSources(
-        { types: ["window", "screen"], fetchWindowIcons: true },
-        (error, sources) => {
-          if (error) throw error;
-          for (let source of sources) {
-            let image = new Buffer(source.thumbnail.toPNG()).toString("base64");
-            console.log(source);
-          }
-        }
-      );
+      console.log("Start record");
+      ipcRenderer.send("open-select-view");
+   
     },
   },
 };
@@ -83,8 +79,4 @@ export default {
 }
 </style>
 
-<style lang="scss">
-body {
-  background-color: var(--background-color);
-}
-</style>
+
