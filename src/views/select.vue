@@ -2,17 +2,31 @@
 <template>
   <div>
     <div class="mytab">
-      <v-tabs v-bind="tabsOptions">
-        <v-tab>your enitre screen</v-tab>
-        <v-tab>application window</v-tab>
+      <v-tabs v-bind="tabsOptions" v-model="tab">
+        <v-tab v-for="(item, i) in tabData" :key="i">{{item.text}}</v-tab>
+
+        <v-tabs-items v-model="tab" dark>
+          <v-tab-item v-for="(item, i) in tabData" :key="i">
+            <v-card>
+              <div
+                v-for="(source,i) in item.id=='screen' ? purifyArray(screenSources):purifyArray(windowSources)"
+                :key="i"
+              >
+                <img :src="pngToB64(source.thumbnail.toPNG())" />
+              </div>
+            </v-card>
+          </v-tab-item>
+        </v-tabs-items>
+
+        <!-- <v-tab-item v-for="i in 2" :key="i" v-model="tab">
+          <v-card flat tile>
+            <v-card-text>test</v-card-text>
+          </v-card>
+        </v-tab-item>-->
       </v-tabs>
     </div>
 
     <br />
-
-    <div v-for="(source,i) in purifyArray(sources)" :key="i">
-      <img :src="pngToB64(source.thumbnail.toPNG())" />
-    </div>
   </div>
 </template>
 
@@ -24,18 +38,29 @@ import { desktopCapturer } from "electron";
 export default {
   data() {
     return {
+      tab: null,
+      tabData: [
+        {
+          text: "your enitre screen",
+          id: "screen",
+        },
+        {
+          text: "application window",
+          id: "window",
+        },
+      ],
       tabsOptions: {
         "background-color": "var(--background-color)!important",
         "slider-color": "var(--main-color)!important",
         color: "var(--main-color)!important",
         dark: true,
         grow: true,
-        centered: true,
+        // centered: true,
       },
       //For sources
-      sources: [],
+      screenSources: [],
+      windowSources: [],
       options: {
-        types: ["window", "screen"],
         thumbnailSize: {
           width: 350,
           height: 350,
@@ -56,16 +81,24 @@ export default {
       return array;
     },
 
-    async getSources() {
+    async updateSources() {
       let vm = this;
-
       //Get sources update per 1 second
-
       await setInterval(async () => {
-        await desktopCapturer.getSources(vm.options).then(async (sources) => {
-          vm.sources = sources;
-        });
+        //Promise all to wait for all call return and store it in dedicated variables
+        [vm.screenSources, vm.windowSources] = await Promise.all([
+          vm.getSources(["screen"]),
+          vm.getSources(["window"]),
+        ]);
       }, 1000);
+    },
+
+    /**
+     * @param {Array} type Get which type of source
+     */
+    getSources(type) {
+      let vm = this;
+      return desktopCapturer.getSources({ types: type, ...vm.options });
     },
 
     pngToB64(pngImage) {
@@ -74,7 +107,7 @@ export default {
     },
   },
   mounted() {
-    this.getSources();
+    this.updateSources();
   },
 };
 </script>
