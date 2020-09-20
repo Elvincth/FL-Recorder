@@ -17,8 +17,8 @@ let win;
 
 ipcMain.on("open-select-view", (event, arg) => {
   let win = new BrowserWindow({
-    width: 400,
-    height: 320,
+    width: 700,
+    height: 450,
     webPreferences: { nodeIntegration: process.env.ELECTRON_NODE_INTEGRATION },
   });
   win.on("close", function() {
@@ -46,8 +46,8 @@ protocol.registerSchemesAsPrivileged([
 function createWindow() {
   // Create the browser window.
   win = new BrowserWindow({
-    width: 800,
-    height: 600,
+    width: 365,
+    height: 620,
     webPreferences: {
       // Use pluginOptions.nodeIntegration, leave this alone
       // See nklayman.github.io/vue-cli-plugin-electron-builder/guide/security.html#node-integration for more info

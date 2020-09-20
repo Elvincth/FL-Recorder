@@ -1,6 +1,15 @@
 <!--Record windows select-->
 <template>
   <div>
+    <div class="mytab">
+      <v-tabs v-bind="tabsOptions">
+        <v-tab>your enitre screen</v-tab>
+        <v-tab>application window</v-tab>
+      </v-tabs>
+    </div>
+
+    <br />
+
     <div v-for="(source,i) in purifyArray(sources)" :key="i">
       <img :src="pngToB64(source.thumbnail.toPNG())" />
     </div>
@@ -15,6 +24,15 @@ import { desktopCapturer } from "electron";
 export default {
   data() {
     return {
+      tabsOptions: {
+        "background-color": "var(--background-color)!important",
+        "slider-color": "var(--main-color)!important",
+        color: "var(--main-color)!important",
+        dark: true,
+        grow: true,
+        centered: true,
+      },
+      //For sources
       sources: [],
       options: {
         types: ["window", "screen"],
@@ -61,4 +79,15 @@ export default {
 };
 </script>
 
-<style lang="scss" scoped></style>
+<style lang="scss" scoped>
+.mytab {
+  position: sticky;
+  top: 0;
+}
+
+::v-deep .v-tab {
+  font-family: "roboto", sans-serif;
+  text-transform: capitalize !important;
+  letter-spacing: 0.5px;
+}
+</style>

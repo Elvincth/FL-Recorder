@@ -1,6 +1,7 @@
 @import '~roboto-fontface/css/roboto/roboto-fontface.css';
 
 :root {
+    --main-color: #00C8FF;
     --background-color: #1B1B1B;
     --separator: #282A30;
     --round-button: #282A30;
@@ -10,6 +11,10 @@
     font-family: 'DS-Digital';
     src: url('/assets/fonts/DS-DIGI.TTF');
 }
+
+// body,html{
+//     overflow: hidden;
+// }
 
 body {
     margin: 0;
