@@ -82,15 +82,14 @@ export default {
     },
 
     async updateSources() {
-      let vm = this;
+      //Promise all to wait for all call return and store it in dedicated variables
+      [this.screenSources, this.windowSources] = await Promise.all([
+        this.getSources(["screen"]),
+        this.getSources(["window"]),
+      ]);
+
       //Get sources update per 1 second
-      await setInterval(async () => {
-        //Promise all to wait for all call return and store it in dedicated variables
-        [vm.screenSources, vm.windowSources] = await Promise.all([
-          vm.getSources(["screen"]),
-          vm.getSources(["window"]),
-        ]);
-      }, 1000);
+      setTimeout(this.updateSources, 1000);
     },
 
     /**
