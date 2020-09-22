@@ -37,6 +37,12 @@ export default {
       remote.BrowserWindow.getFocusedWindow().minimize();
     },
   },
+  mounted() {
+    //minimize on body click
+    document.documentElement.addEventListener("click", () => {
+      this.minimize();
+    });
+  },
 };
 </script>
 
