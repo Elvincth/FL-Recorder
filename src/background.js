@@ -17,10 +17,10 @@ let win;
 
 ipcMain.on("open-toolbar-view", (event, arg) => {
   let win = new BrowserWindow({
-    transparent: true,
+    transparent: true, 
     frame: false,
-    width: 750,
-    height: 100,
+    width: 500,
+    height: 70,
     webPreferences: { nodeIntegration: process.env.ELECTRON_NODE_INTEGRATION },
   });
 
@@ -30,15 +30,13 @@ ipcMain.on("open-toolbar-view", (event, arg) => {
 
   if (process.env.WEBPACK_DEV_SERVER_URL) {
     // Load the url of the dev server if in development mode
-    win.loadURL(process.env.WEBPACK_DEV_SERVER_URL + "select");
+    win.loadURL(process.env.WEBPACK_DEV_SERVER_URL + "toolbar");
     if (!isDevelopment) win.webContents.openDevTools();
   } else {
     createProtocol("app");
     // Load the index.html when not in development
     win.loadURL("app://./index.html");
   }
-
-  console.log("Open select view recevied");
 });
 
 ipcMain.on("open-select-view", (event, arg) => {
