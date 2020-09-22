@@ -1,5 +1,7 @@
 <template>
-  
+  <div>
+      Toolbar view
+  </div>
 </template>
 
 <script>

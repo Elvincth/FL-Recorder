@@ -4,15 +4,23 @@ import VueRouter from "vue-router";
 Vue.use(VueRouter);
 
 const routes = [
+  //Home
   {
     path: "/",
     name: "home",
     component: () => import("../views/home"),
   },
+  //Select view
   {
     path: "/select",
     name: "select",
     component: () => import("../views/select"),
+  },
+  //Tollbar view
+  {
+    path: "/toolbar",
+    name: "toolbar",
+    component: () => import("../views/toolbar"),
   },
 ];
 

@@ -15,19 +15,46 @@ contextMenu();
 // be closed automatically when the JavaScript object is garbage collected.
 let win;
 
-ipcMain.on("open-select-view", (event, arg) => {
+ipcMain.on("open-toolbar-view", (event, arg) => {
   let win = new BrowserWindow({
-    width: 700,
-    height: 450,
+    transparent: true,
+    frame: false,
+    width: 750,
+    height: 100,
     webPreferences: { nodeIntegration: process.env.ELECTRON_NODE_INTEGRATION },
   });
+
   win.on("close", function() {
     win = null;
   });
 
   if (process.env.WEBPACK_DEV_SERVER_URL) {
     // Load the url of the dev server if in development mode
-    win.loadURL(process.env.WEBPACK_DEV_SERVER_URL+"select");
+    win.loadURL(process.env.WEBPACK_DEV_SERVER_URL + "select");
+    if (!isDevelopment) win.webContents.openDevTools();
+  } else {
+    createProtocol("app");
+    // Load the index.html when not in development
+    win.loadURL("app://./index.html");
+  }
+
+  console.log("Open select view recevied");
+});
+
+ipcMain.on("open-select-view", (event, arg) => {
+  let win = new BrowserWindow({
+    width: 700,
+    height: 450,
+    webPreferences: { nodeIntegration: process.env.ELECTRON_NODE_INTEGRATION },
+  });
+
+  win.on("close", function() {
+    win = null;
+  });
+
+  if (process.env.WEBPACK_DEV_SERVER_URL) {
+    // Load the url of the dev server if in development mode
+    win.loadURL(process.env.WEBPACK_DEV_SERVER_URL + "select");
     if (!isDevelopment) win.webContents.openDevTools();
   } else {
     createProtocol("app");

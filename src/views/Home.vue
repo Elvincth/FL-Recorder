@@ -18,6 +18,9 @@
       <div class="item">
         <fabButton iconFile="videocam.svg">Camera</fabButton>
       </div>
+      <div class="item">
+        <button @click="openToolBar">Tool bar</button>
+      </div>
     </div>
   </div>
 </template>
@@ -44,7 +47,9 @@ export default {
     screenRecord() {
       console.log("Start record");
       ipcRenderer.send("open-select-view");
-   
+    },
+    openToolBar() {
+      ipcRenderer.send("open-toolbar-view");
     },
   },
 };
