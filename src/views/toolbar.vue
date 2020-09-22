@@ -11,7 +11,7 @@
 
     <!--Button Screen Record-->
     <div v-tooltip.top="'Display'" class="item">
-      <v-popover>
+      <v-popover v-bind="popoverOptions">
         <iconButton size="1.5rem">desktop_windows</iconButton>
         <template slot="popover">
           <a v-close-popover>Close</a>
@@ -40,6 +40,16 @@ export default {
     timer,
     iconButton,
   },
+  data() {
+    return {
+      //popover options
+      popoverOptions: {
+        placement: "bottom",
+        autoHide: true,
+        popoverClass: "my-popover",
+      },
+    };
+  },
   methods: {
     minimize() {
       remote.BrowserWindow.getFocusedWindow().minimize();
@@ -64,6 +74,12 @@ body {
   width: 100%;
   height: 100%;
   background-color: transparent;
+}
+
+//Popover style
+.popover {
+  margin-bottom: 17px !important;
+  margin-left: 5px;
 }
 </style>
 

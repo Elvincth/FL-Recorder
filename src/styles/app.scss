@@ -40,8 +40,9 @@ $tooltip-bg-color: var(--background-color);
     .tooltip-inner {
         background: $tooltip-bg-color;
         color: white;
+        font-size: 0.9rem;
         border-radius: 0.35rem;
-        padding: 0.5rem 1rem;
+        padding: 0.5rem 0.9rem;
     }
 
     .tooltip-arrow {
@@ -116,7 +117,8 @@ $tooltip-bg-color: var(--background-color);
 
     &.popover {
         outline: none;
-        
+        z-index: 10001;
+
         .popover-inner {
             background: $tooltip-bg-color;
             color: black;

@@ -20,7 +20,7 @@ ipcMain.on("open-toolbar-view", (event, arg) => {
     transparent: true,
     frame: false,
     width: 530, //490
-    height: 120, //65
+    height: 300, //65
     resizable: false,
     webPreferences: {
       nodeIntegration: process.env.ELECTRON_NODE_INTEGRATION,
