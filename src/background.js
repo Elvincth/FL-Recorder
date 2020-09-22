@@ -17,13 +17,17 @@ let win;
 
 ipcMain.on("open-toolbar-view", (event, arg) => {
   let win = new BrowserWindow({
-    transparent: true, 
+    transparent: true,
     frame: false,
     width: 500,
     height: 70,
     resizable: false,
     webPreferences: { nodeIntegration: process.env.ELECTRON_NODE_INTEGRATION },
   });
+
+  win.setFullScreenable(false);
+  win.setMaximizable(false);
+  win.isResizable(false);
 
   win.on("close", function() {
     win = null;
