@@ -9,16 +9,16 @@
       <timer></timer>
     </div>
 
+    <!--Button Screen Record-->
+    <iconButton size="1.8rem" v-tooltip.top="'Display'">fullscreen</iconButton>
     <!--Button Window Record-->
-    <iconButton size="1.7rem">web_asset</iconButton>
+    <iconButton size="1.7rem" v-tooltip.top="'Window'">web_asset</iconButton>
     <!--Button Screen Record-->
-    <iconButton size="1.8rem">fullscreen</iconButton>
+    <iconButton size="1.5rem" v-tooltip.top="'Settings'">tune</iconButton>
     <!--Button Screen Record-->
-    <iconButton size="1.5rem">tune</iconButton>
+    <iconButton size="1.6rem" v-tooltip.top="'More'">more_horiz</iconButton>
     <!--Button Screen Record-->
-    <iconButton size="1.6rem">more_horiz</iconButton>
-    <!--Button Screen Record-->
-    <iconButton size="1.2rem">visibility_off</iconButton>
+    <iconButton size="1.2rem" v-tooltip.top="'Minimize'">visibility_off</iconButton>
   </div>
 </template>
 

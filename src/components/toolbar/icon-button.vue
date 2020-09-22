@@ -1,5 +1,5 @@
 <template>
-  <div class="item icon no-drag" v-tooltip.top="'You have new messages.'">
+  <div class="item icon no-drag">
     <v-btn icon color="var(--icon-button)" large>
       <span class="material-icons" :style="`font-size: ${size}`">
         <!--Name of the icob-->
