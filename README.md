@@ -3,7 +3,16 @@
   FL Recorder
 </h1>
 
-<p align="center">Minimal </p>
+<p align="center">A minimal and clean cross platform screen recorder application using electron.js </p>
+
+<br>
+
+<p align="center"><img src="https://i.imgur.com/2oM2kij.png"/></p>
+
+
+<p align="center">🚧🚧🚧🚧🚧🚧🚧</p>
+<p align="center">Working in progress</p>
+<p align="center">🚧🚧🚧🚧🚧🚧🚧</p>
 
 
 ## Project setup
