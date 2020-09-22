@@ -10,7 +10,7 @@
     </div>
 
     <!--Button Screen Record-->
-    <iconButton size="1.8rem" v-tooltip.top="'Display'">fullscreen</iconButton>
+    <iconButton size="1.5rem" v-tooltip.top="'Display'">desktop_windows</iconButton>
     <!--Button Window Record-->
     <iconButton size="1.7rem" v-tooltip.top="'Window'">web_asset</iconButton>
     <!--Button Screen Record-->
@@ -18,18 +18,24 @@
     <!--Button Screen Record-->
     <iconButton size="1.6rem" v-tooltip.top="'More'">more_horiz</iconButton>
     <!--Button Screen Record-->
-    <iconButton size="1.2rem" v-tooltip.top="'Minimize'">visibility_off</iconButton>
+    <iconButton @click.native="minimize" size="1.2rem" v-tooltip.top="'Minimize'">visibility_off</iconButton>
   </div>
 </template>
 
 <script>
 import timer from "../components/home/timer";
 import iconButton from "../components/toolbar/icon-button";
+import { remote } from "electron";
 
 export default {
   components: {
     timer,
     iconButton,
+  },
+  methods: {
+    minimize() {
+      remote.BrowserWindow.getFocusedWindow().minimize();
+    },
   },
 };
 </script>
