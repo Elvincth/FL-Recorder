@@ -1,17 +1,11 @@
 <template>
   <div class="item icon no-drag">
-      <!--Tooltop-->
-    <v-tooltip top color="var(--background-color)">
-      <template v-slot:activator="{ on, attrs }">
-        <v-btn icon color="var(--icon-button)" large v-bind="attrs" v-on="on">
-          <span class="material-icons" :style="`font-size: ${size}`">
-            <!--Name of the icob-->
-            <slot></slot>
-          </span>
-        </v-btn>
-      </template>
-      <span>Tooltip</span>
-    </v-tooltip>
+    <v-btn icon color="var(--icon-button)" large>
+      <span class="material-icons" :style="`font-size: ${size}`">
+        <!--Name of the icob-->
+        <slot></slot>
+      </span>
+    </v-btn>
   </div>
 </template>
 
