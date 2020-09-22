@@ -1,4 +1,10 @@
-# fl-recorder
+
+<h1 align="center">
+  FL Recorder
+</h1>
+
+<p align="center"> </p>
+
 
 ## Project setup
 ```
