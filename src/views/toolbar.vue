@@ -8,20 +8,24 @@
     <div class="item timer-wrapper">
       <timer></timer>
     </div>
-    <!--Button-->
-    <div class="item no-drag">
-      <v-btn icon color="pink">
-        <v-icon>mdi-heart</v-icon>
-      </v-btn>
-    </div>
+
+    <!--Button Window Record-->
+    <iconButton>web_asset</iconButton>
+    <!--Button Screen Record-->
+    <iconButton>fullscreen</iconButton>
+    <!--Button Screen Record-->
+    <iconButton>tune</iconButton>
   </div>
 </template>
 
 <script>
 import timer from "../components/home/timer";
+import iconButton from "../components/toolbar/icon-button";
+
 export default {
   components: {
     timer,
+    iconButton,
   },
 };
 </script>
@@ -48,6 +52,11 @@ $window-width: 500px;
   font-size: 1.8rem;
 }
 
+//Icon button style
+::v-deep .theme--light.v-btn.v-btn--icon {
+  color: var(--icon-button);
+}
+
 //Disbale dragging area
 .no-drag {
   -webkit-app-region: no-drag;
@@ -55,6 +64,7 @@ $window-width: 500px;
 
 .timer-wrapper {
   margin-left: 1.5rem;
+  margin-right: 1rem;
 }
 
 .indicator {
@@ -78,6 +88,10 @@ $window-width: 500px;
     display: flex;
     justify-content: center;
     align-items: center;
+    //For icon container
+    &.icon {
+      margin-left: 1rem;
+    }
   }
 }
 </style>
