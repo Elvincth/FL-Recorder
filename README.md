@@ -3,7 +3,7 @@
   FL Recorder
 </h1>
 
-<p align="center">A minimal and clean cross platform screen recorder application using electron.js </p>
+<p align="center">A minimal and clean cross platform screen recorder application using electron and vue </p>
 
 <br>
 
