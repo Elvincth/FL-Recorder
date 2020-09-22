@@ -7,14 +7,22 @@ export default {};
 </script>
 
 <style lang="scss">
-html,
+body,
+html {
+  overflow: hidden;
+}
+
 body {
-  border-radius: 20px;
   width: 100%;
   height: 100%;
+  background: transparent;
 }
 
 .main {
   -webkit-app-region: drag;
+  width: 500px;
+  height: 70px;
+  border-radius: 0.5rem;
+  background-color: var(--background-color);
 }
 </style>
