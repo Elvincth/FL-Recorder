@@ -3,11 +3,13 @@
   <div>
     <div class="mytab">
       <v-tabs v-bind="tabsOptions" v-model="tab">
+        <!--Tabs-->
         <v-tab v-for="(item, i) in tabData" :key="i">{{item.text}}</v-tab>
 
         <v-tabs-items v-model="tab" dark>
           <v-tab-item v-for="(item, i) in tabData" :key="i">
             <v-card>
+              <!--Window select-->
               <div
                 v-for="(source,i) in item.id=='screen' ? purifyArray(screenSources):purifyArray(windowSources)"
                 :key="i"
@@ -39,6 +41,7 @@ export default {
   data() {
     return {
       tab: null,
+      //For tabs
       tabData: [
         {
           text: "your enitre screen",
