@@ -19,10 +19,13 @@ ipcMain.on("open-toolbar-view", (event, arg) => {
   let win = new BrowserWindow({
     transparent: true,
     frame: false,
-    width: 500,
-    height: 65,
+    width: 530, //490
+    height: 100, //65
     resizable: false,
-    webPreferences: { nodeIntegration: process.env.ELECTRON_NODE_INTEGRATION },
+    webPreferences: {
+      nodeIntegration: process.env.ELECTRON_NODE_INTEGRATION,
+      experimentalFeatures: true,
+    },
   });
 
   win.setFullScreenable(false);

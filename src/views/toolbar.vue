@@ -10,11 +10,15 @@
     </div>
 
     <!--Button Window Record-->
-    <iconButton>web_asset</iconButton>
+    <iconButton size="1.7rem">web_asset</iconButton>
     <!--Button Screen Record-->
-    <iconButton>fullscreen</iconButton>
+    <iconButton size="1.8rem">fullscreen</iconButton>
     <!--Button Screen Record-->
-    <iconButton>tune</iconButton>
+    <iconButton size="1.5rem">tune</iconButton>
+    <!--Button Screen Record-->
+    <iconButton size="1.6rem">more_horiz</iconButton>
+    <!--Button Screen Record-->
+    <iconButton size="1.2rem">visibility_off</iconButton>
   </div>
 </template>
 
@@ -44,12 +48,12 @@ body {
 </style>
 
 <style lang="scss" scoped>
-$indicator-size: 18px;
-$window-height: 65px;
-$window-width: 500px;
+$indicator-size: 1rem;
+$window-height: 60px;
+$window-width: 490px;
 
 ::v-deep .timer {
-  font-size: 1.8rem;
+  font-size: 1.78rem;
 }
 
 //Icon button style
@@ -80,9 +84,12 @@ $window-width: 500px;
   width: $window-width;
   height: $window-height;
   border-radius: 0.5rem;
-  background-color: var(--background-color);
+  background-color:transparent;
+  backdrop-filter: blur(6px);
   padding: 1rem 1.5rem;
   display: flex;
+  position: absolute;
+  bottom: 0;
 
   .item {
     display: flex;
