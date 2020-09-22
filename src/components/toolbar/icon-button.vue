@@ -1,7 +1,7 @@
 <template>
   <div class="item icon no-drag">
       <!--Tooltop-->
-    <v-tooltip top>
+    <v-tooltip top color="var(--background-color)">
       <template v-slot:activator="{ on, attrs }">
         <v-btn icon color="var(--icon-button)" large v-bind="attrs" v-on="on">
           <span class="material-icons" :style="`font-size: ${size}`">

@@ -84,8 +84,8 @@ $window-width: 490px;
   width: $window-width;
   height: $window-height;
   border-radius: 0.5rem;
-  background-color:transparent;
-  backdrop-filter: blur(6px);
+  background-color: transparent;
+  background-color: var(--background-color); // rgba(0, 0, 0, 0.8)
   padding: 1rem 1.5rem;
   display: flex;
   position: absolute;
