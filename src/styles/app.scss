@@ -115,10 +115,10 @@ $tooltip-bg-color: var(--background-color);
     }
 
     &.popover {
-        $color: #f9f9f9;
-
+        outline: none;
+        
         .popover-inner {
-            background: $color;
+            background: $tooltip-bg-color;
             color: black;
             padding: 24px;
             border-radius: 5px;
@@ -126,7 +126,7 @@ $tooltip-bg-color: var(--background-color);
         }
 
         .popover-arrow {
-            border-color: $color;
+            border-color: $tooltip-bg-color;
         }
     }
 

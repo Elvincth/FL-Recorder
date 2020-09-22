@@ -10,7 +10,15 @@
     </div>
 
     <!--Button Screen Record-->
-    <iconButton size="1.5rem" v-tooltip.top="'Display'">desktop_windows</iconButton>
+    <div v-tooltip.top="'Display'" class="item">
+      <v-popover>
+        <iconButton size="1.5rem">desktop_windows</iconButton>
+        <template slot="popover">
+          <a v-close-popover>Close</a>
+        </template>
+      </v-popover>
+    </div>
+
     <!--Button Window Record-->
     <iconButton size="1.7rem" v-tooltip.top="'Window'">web_asset</iconButton>
     <!--Button Screen Record-->
@@ -38,10 +46,10 @@ export default {
     },
   },
   mounted() {
-    //minimize on body click
-    document.documentElement.addEventListener("click", () => {
-      this.minimize();
-    });
+    // //minimize on body click
+    // document.documentElement.addEventListener("click", () => {
+    //   this.minimize();
+    // });
   },
 };
 </script>
@@ -102,15 +110,15 @@ $window-width: 490px;
   display: flex;
   position: absolute;
   bottom: 0;
+}
 
-  .item {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    //For icon container
-    &.icon {
-      margin-left: 1rem;
-    }
+.item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  //For icon container
+  &.icon {
+    margin-left: 1rem;
   }
 }
 </style>

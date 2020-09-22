@@ -31,8 +31,6 @@ import separator from "../components/shared/separator";
 import fabButton from "../components/shared/fab-button";
 //Eletronc
 import { ipcRenderer } from "electron";
-//Lib
-import * as record from "../util/screen-record";
 
 export default {
   components: {
