@@ -4,7 +4,7 @@ import router from "./router";
 import store from "./store";
 import vuetify from "./plugins/vuetify";
 import VTooltip from "v-tooltip";
-
+import "simplebar-vue/dist/simplebar.min.css";
 
 Vue.config.productionTip = false;
 

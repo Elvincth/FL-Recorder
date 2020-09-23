@@ -2422,6 +2422,11 @@ camelcase@^6.0.0:
   resolved "https://registry.npm.taobao.org/camelcase/download/camelcase-6.0.0.tgz?cache=0&sync_timestamp=1586229901005&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Fcamelcase%2Fdownload%2Fcamelcase-6.0.0.tgz#5259f7c30e35e278f1bdc2a4d91230b37cad981e"
   integrity sha1-Uln3ww414njxvcKk2RIws3ytmB4=
 
+can-use-dom@^0.1.0:
+  version "0.1.0"
+  resolved "https://registry.yarnpkg.com/can-use-dom/-/can-use-dom-0.1.0.tgz#22cc4a34a0abc43950f42c6411024a3f6366b45a"
+  integrity sha1-IsxKNKCrxDlQ9CxkEQJKP2NmtFo=
+
 caniuse-api@^3.0.0:
   version "3.0.0"
   resolved "https://registry.npm.taobao.org/caniuse-api/download/caniuse-api-3.0.0.tgz#5e4d90e2274961d46291997df599e3ed008ee4c0"
@@ -5540,6 +5545,11 @@ locate-path@^5.0.0:
   dependencies:
     p-locate "^4.1.0"
 
+lodash-es@^4.17.15:
+  version "4.17.15"
+  resolved "https://registry.yarnpkg.com/lodash-es/-/lodash-es-4.17.15.tgz#21bd96839354412f23d7a10340e5eac6ee455d78"
+  integrity sha512-rlrc3yU3+JNOpZ9zj5pQtxnx2THmvRykwL4Xlxoa8I9lHBlVbbyPhgyPMioxVZ4NqyxaVVtaJnzsyOidQIhyyQ==
+
 lodash.defaultsdeep@^4.6.1:
   version "4.6.1"
   resolved "https://registry.npm.taobao.org/lodash.defaultsdeep/download/lodash.defaultsdeep-4.6.1.tgz#512e9bd721d272d94e3d3a63653fa17516741ca6"
@@ -7758,6 +7768,22 @@ simple-swizzle@^0.2.2:
   integrity sha1-pNprY1/8zMoz9w0Xy5JZLeleVXo=
   dependencies:
     is-arrayish "^0.3.1"
+
+simplebar-core@^1.0.2:
+  version "1.0.3"
+  resolved "https://registry.yarnpkg.com/simplebar-core/-/simplebar-core-1.0.3.tgz#c78871ecf0dbdcabf54b2e02defd0f8e431ea307"
+  integrity sha512-1beyQFG9fKVjz4BdwE9TBU7FfDUofKklexzlIr8bpz6d4WVHIOigUA3nMtiTNwHtR/J/sHXajOwVG0QDzlT4OA==
+  dependencies:
+    can-use-dom "^0.1.0"
+    lodash-es "^4.17.15"
+
+simplebar-vue@^2.0.0-beta.5:
+  version "2.0.0-beta.5"
+  resolved "https://registry.yarnpkg.com/simplebar-vue/-/simplebar-vue-2.0.0-beta.5.tgz#3415d6fec4afacf332dc146933bd235896a0b79f"
+  integrity sha512-F3T8zGkMqQhBXBOfH5d5VX/LNb5PL4Lc3X69zP0SwTFJ2GoiPl4pc9gSrCmbr3dASFSisTpcxVlb5rnLnlTegw==
+  dependencies:
+    core-js "^3.6.5"
+    simplebar-core "^1.0.2"
 
 slash@^1.0.0:
   version "1.0.0"

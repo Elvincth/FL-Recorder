@@ -14,7 +14,7 @@
       <v-popover v-bind="popoverOptions">
         <iconButton size="1.5rem">desktop_windows</iconButton>
         <template slot="popover">
-          <a v-close-popover>Close</a>
+          <selectPopover></selectPopover>
         </template>
       </v-popover>
     </div>
@@ -31,14 +31,18 @@
 </template>
 
 <script>
+//components
 import timer from "../components/home/timer";
 import iconButton from "../components/toolbar/icon-button";
+import selectPopover from "../components/toolbar/select-popover";
+//lib
 import { remote } from "electron";
 
 export default {
   components: {
     timer,
     iconButton,
+    selectPopover,
   },
   data() {
     return {

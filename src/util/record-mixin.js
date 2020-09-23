@@ -8,8 +8,8 @@ export default {
       windowSources: [],
       options: {
         thumbnailSize: {
-          width: 350,
-          height: 350,
+          width: 250,
+          height: 250,
         },
         fetchWindowIcons: true,
       },
