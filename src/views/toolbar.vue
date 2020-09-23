@@ -23,7 +23,7 @@
     <iconButton size="1.7rem" v-tooltip.top="'Window'">web_asset</iconButton>
     <!--Button Screen Record-->
     <iconButton size="1.5rem" v-tooltip.top="'Settings'">tune</iconButton>
-    <!--Button Screen Record-->
+    <!--Button More-->
     <iconButton size="1.6rem" v-tooltip.top="'More'">more_horiz</iconButton>
     <!--Button Screen Record-->
     <iconButton @click.native="minimize" size="1.2rem" v-tooltip.top="'Minimize'">visibility_off</iconButton>
