@@ -2,6 +2,7 @@
   <simplebar class="select-popover-wrapper">
     <!--Header-->
     <div class="select-popover-header">
+      <span>Select a screen</span>
       <iconButton
         :buttonOptions="{ 'x-small': true }"
         style="margin-left: auto"
@@ -48,12 +49,14 @@ export default {
 <style lang="scss" scoped>
 .select-popover- {
   &wrapper {
-    height: 290px;
+    max-height: 290px;
+    min-height: 230px;
     width: 290px;
   }
 
   &header {
     display: flex;
+    align-items: center;
     //TRBL
     margin: 0.5rem 1rem 0 0;
   }

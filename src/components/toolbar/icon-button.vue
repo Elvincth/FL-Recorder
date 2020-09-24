@@ -17,7 +17,12 @@ export default {
    */
   props: {
     size: { type: String, default: "2rem" },
-    buttonOptions: { type: Object, default: { large: true } },
+    buttonOptions: {
+      type: Object,
+      default() {
+        return { large: true };
+      },
+    },
   },
 };
 </script>
