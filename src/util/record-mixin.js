@@ -20,7 +20,7 @@ export default {
     purifyArray(array) {
       //Filter dragged window
       array = array.filter((item) => item.name !== "Drag");
-      //Sort by id
+      //Sort by id (Keep the same position when update)
       array = array.slice().sort(function(a, b) {
         return a.id.replace(/^\D+/g, "") > b.id.replace(/^\D+/g, "") ? 1 : -1;
       });

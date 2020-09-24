@@ -46,13 +46,10 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-$popover-height: 290px;
-$popover-width: 290px;
-
 .select-popover- {
   &wrapper {
-    height: $popover-height;
-    width: $popover-width;
+    height: 290px;
+    width: 290px;
   }
 
   &header {
