@@ -20,7 +20,7 @@
           : purifyArray(windowSources)"
         :key="i"
       >
-        <img :src="pngToB64(source.thumbnail.toPNG())" />
+        <screenThumbnail :src="pngToB64(source.thumbnail.toPNG())" />
       </div>
     </div>
   </simplebar>
@@ -30,11 +30,13 @@
 import recorderMixin from "../../util/record-mixin";
 import simplebar from "simplebar-vue";
 import iconButton from "@/components/toolbar/icon-button";
+import screenThumbnail from "@/components/shared/screen-thumbnail";
 
 export default {
   components: {
     simplebar,
     iconButton,
+    screenThumbnail,
   },
   props: {
     sourceType: {
