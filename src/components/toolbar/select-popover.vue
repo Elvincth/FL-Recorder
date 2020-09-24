@@ -20,7 +20,7 @@
           : purifyArray(windowSources)"
         :key="i"
       >
-        <screenThumbnail :src="pngToB64(source.thumbnail.toPNG())" />
+        <screenSelect :src="pngToB64(source.thumbnail.toPNG())" :name="`Screen ${i+1}`"/>
       </div>
     </div>
   </simplebar>
@@ -30,13 +30,13 @@
 import recorderMixin from "../../util/record-mixin";
 import simplebar from "simplebar-vue";
 import iconButton from "@/components/toolbar/icon-button";
-import screenThumbnail from "@/components/shared/screen-thumbnail";
+import screenSelect from "@/components/shared/screen-select";
 
 export default {
   components: {
     simplebar,
     iconButton,
-    screenThumbnail,
+    screenSelect,
   },
   props: {
     sourceType: {
@@ -67,6 +67,7 @@ export default {
       position: absolute;
       white-space: nowrap;
       left: 50%;
+      font-weight: 300;
       transform: translate(-50%, 0);
     }
   }
