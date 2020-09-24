@@ -1,11 +1,18 @@
 <template>
   <simplebar class="select-popover-wrapper">
-    <!-- <a v-close-popover>Close</a> -->
-    <div>
-      <iconButton size="1rem">close</iconButton>
+    <!--Header-->
+    <div class="select-popover-header">
+      <iconButton
+        :buttonOptions="{ 'x-small': true }"
+        style="margin-left: auto"
+        size="1rem"
+        v-close-popover
+        >close
+      </iconButton>
     </div>
+
     <!--Window select-->
-    <div class="select-popover-container" v-close-popover>
+    <div class="select-popover-container">
       <div
         v-for="(source, i) in sourceType == 'screen'
           ? purifyArray(screenSources)
@@ -42,16 +49,24 @@ export default {
 $popover-height: 290px;
 $popover-width: 290px;
 
-.select-popover-wrapper {
-  height: $popover-height;
-  width: $popover-width;
-}
+.select-popover- {
+  &wrapper {
+    height: $popover-height;
+    width: $popover-width;
+  }
 
-.select-popover-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin: 1.2rem 1rem;
-  // padding-right: 15px;
+  &header {
+    display: flex;
+    //TRBL
+    margin: 0.5rem 1rem 0 0;
+  }
+
+  &container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0.5rem 1.2rem 1.2rem 1rem;
+    // padding-right: 15px;
+  }
 }
 </style>
