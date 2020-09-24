@@ -4,9 +4,12 @@
 :root {
     --main-color: #00C8FF;
     --background-color: #1B1B1B;
+    --popover-background-color: #1d1d1d;
+    --popover-header-color: #161616;
     --separator: #282A30;
     --round-button: #282A30;
     --icon-button: #EFEFEF; //Icon button color
+    --popover-border-radius: 6.5px; //Border radius of popover
 }
 
 @font-face {
@@ -128,16 +131,16 @@ $tooltip-bg-color: var(--background-color);
         z-index: 10001;
 
         .popover-inner {
-            background: var(--background-color);
+            background: var(--popover-background-color);
             padding: 0;
             margin: 0;
             // padding: 24px;
-            border-radius: 7px;
+            border-radius: var(--popover-border-radius);
         }
 
         .popover-arrow {
             display: none;
-            border-color: var(--background-color);
+            border-color: var(--popover-background-color);
         }
     }
 

@@ -20,11 +20,15 @@ export default {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 0.7rem;
-  // border-radius: 8px;
+  padding: 0.7rem 0.7rem 0.5rem 0.7rem;
+  transition: all 0.15s;
+  border-radius: 5px;
   //Screen name style
+
   .name {
+    margin-top: 0.5rem;
   }
+
   &:hover {
     background-color: rgba(255, 255, 255, 0.03);
   }

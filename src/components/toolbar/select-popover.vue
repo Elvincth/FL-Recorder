@@ -20,7 +20,10 @@
           : purifyArray(windowSources)"
         :key="i"
       >
-        <screenSelect :src="pngToB64(source.thumbnail.toPNG())" :name="`Screen ${i+1}`"/>
+        <screenSelect
+          :src="pngToB64(source.thumbnail.toPNG())"
+          :name="`Screen ${i + 1}`"
+        />
       </div>
     </div>
   </simplebar>
@@ -45,30 +48,38 @@ export default {
     },
   },
   mixins: [recorderMixin],
+  mounted(){}
 };
 </script>
 
 <style lang="scss" scoped>
+$popover-radius: var(--popover-border-radius);
+
 .select-popover- {
   &wrapper {
     max-height: 290px;
     min-height: 200px;
-    width: 290px;
+    width: 275px;
   }
 
   &header {
     display: flex;
     align-items: center;
-    position: relative;
+    background-color: var(--popover-header-color);
+    border-width: 0;
+    border-radius: $popover-radius $popover-radius 0 0;
+    //Stay on top
+    position: sticky;
+    top: 0;
     //TRBL
-    margin: 0.6rem 1rem 0.6rem 1rem;
+    padding: 0.7rem 1rem 0.6rem 1rem;
     .title {
-      font-size: 1rem;
-      position: absolute;
+      font-size: 1.05rem;
+      // position: absolute;
       white-space: nowrap;
-      left: 50%;
-      font-weight: 300;
-      transform: translate(-50%, 0);
+      // left: 50%;
+      // font-weight: 500;
+      // transform: translate(-50%, 0);
     }
   }
 
