@@ -26,11 +26,19 @@ body {
 
 * {
     color: #fff;
+    box-sizing: border-box !important;
+
+    &::after,
+    ::before {
+        box-sizing: border-box !important;
+    }
 }
 
-// .menubar {
-//     display: none;
-// }
+.simplebar-scrollbar::before {
+    background-color: rgba(255, 255, 255, .2) !important;
+}
+
+
 $tooltip-bg-color: var(--background-color);
 
 .tooltip {
@@ -120,16 +128,16 @@ $tooltip-bg-color: var(--background-color);
         z-index: 10001;
 
         .popover-inner {
-            background: $tooltip-bg-color;
-            color: black;
+            background: var(--background-color);
+            padding: 0;
+            margin: 0;
             // padding: 24px;
-            border-radius: 5px;
-            box-shadow: 0 5px 30px rgba(black, .1);
+            border-radius: 7px;
         }
 
         .popover-arrow {
             display: none;
-            border-color: $tooltip-bg-color;
+            border-color: var(--background-color);
         }
     }
 

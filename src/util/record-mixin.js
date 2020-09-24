@@ -48,7 +48,7 @@ export default {
 
     pngToB64(pngImage) {
       //source.thumbnail.toPNG()
-      return "data:image/png;base64," + new Buffer(pngImage).toString("base64");
+      return `data:image/png;base64,${new Buffer(pngImage).toString("base64")}`;
     },
   },
   mounted() {
