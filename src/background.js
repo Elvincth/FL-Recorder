@@ -50,7 +50,7 @@ ipcMain.on("open-toolbar-view", (event, arg) => {
 ipcMain.on("open-select-view", (event, arg) => {
   let win = new BrowserWindow({
     width: 700,
-    height: 450,
+    height: 290,
     webPreferences: { nodeIntegration: process.env.ELECTRON_NODE_INTEGRATION },
   });
 
